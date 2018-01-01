@@ -96,7 +96,6 @@ class ViewController: UITableViewController {
         manager.stopDeviceMotionUpdates()
         startAttitude = nil
         UISelectionFeedbackGenerator().selectionChanged()
-        print("Lock")
     }
 
     @objc func unlockAutoScroll() {
