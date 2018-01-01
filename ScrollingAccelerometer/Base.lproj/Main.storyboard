@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYN-Jo-tgA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scrolling Accelerometer-->
+        <scene sceneID="azD-Mp-HAX">
+            <objects>
+                <tableViewController id="TdZ-lH-YIE" customClass="ViewController" customModule="ScrollingAccelerometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="172" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LKn-Rp-2XT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="172" id="Ivr-UX-bpL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="172"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ivr-UX-bpL" id="vaN-5F-QgK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post-placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="36J-wt-kDI">
+                                            <rect key="frame" x="8" y="8" width="359" height="155.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="36J-wt-kDI" secondAttribute="trailing" constant="8" id="2WB-DU-geE"/>
+                                        <constraint firstItem="36J-wt-kDI" firstAttribute="top" secondItem="vaN-5F-QgK" secondAttribute="top" constant="8" id="IC2-jA-AgQ"/>
+                                        <constraint firstItem="36J-wt-kDI" firstAttribute="leading" secondItem="vaN-5F-QgK" secondAttribute="leading" constant="8" id="THK-26-1xe"/>
+                                        <constraint firstAttribute="bottom" secondItem="36J-wt-kDI" secondAttribute="bottom" constant="8" id="Wut-4j-Bpq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="TdZ-lH-YIE" id="eCX-iZ-r40"/>
+                            <outlet property="delegate" destination="TdZ-lH-YIE" id="p5v-Ym-uGn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Scrolling Accelerometer" id="fnI-an-21z">
+                        <barButtonItem key="leftBarButtonItem" title="Help" id="Izx-Ap-CiF">
+                            <connections>
+                                <action selector="showTip:" destination="TdZ-lH-YIE" id="83D-aK-Gt6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quI-Cn-MH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="141.67916041979012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Nk-Xp-gcg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYN-Jo-tgA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qCL-vD-AKR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TdZ-lH-YIE" kind="relationship" relationship="rootViewController" id="UU6-1Q-U7t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0t-24-xCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195.19999999999999" y="142.1289355322339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="post-placeholder.png" width="620" height="300"/>
+    </resources>
+</document>
